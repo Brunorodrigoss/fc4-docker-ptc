@@ -42,6 +42,7 @@
 |docker run -it -p 3001:3001 brunorodrigoss/docker-node-example:latest|
 |docker run -it -p 3001:3001 -e MESSAGE="HELLO" brunorodrigoss/docker-node-example:latest|
 ||
+|docker run -it -u root -p 3001:3001 -e MESSAGE="HELLO" brunorodrigoss/docker-node-example:latest|
 
 
 
