@@ -35,6 +35,13 @@
 ||
 |docker system df|
 ||
+|docker build -t brunorodrigoss/docker-node-example:latest .|
+|docker run -p 3000:3000 brunorodrigoss/docker-node-example:latest|
+||
+|docker build --build-arg NODE_VERSION=21.0.0 -t brunorodrigoss/docker-node-example:latest .|
+|docker run -it -p 3001:3001 brunorodrigoss/docker-node-example:latest|
+|docker run -it -p 3001:3001 -e MESSAGE="HELLO" brunorodrigoss/docker-node-example:latest|
+||
 
 
 
