@@ -1,10 +1,16 @@
 ARG NODE_VERSION=20.18.0
-FROM node:${NODE_VERSION}
+#FROM node:${NODE_VERSION}
+#FROM node:${NODE_VERSION}-alpine
+FROM node:${NODE_VERSION}-slim
 
 ENV PORT=3001
 ENV MESSAGE="Hello Docker!"
 
 WORKDIR /app
+
+RUN apt-get update && \
+    apt-get install -y vim && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY package*.json .
 
