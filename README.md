@@ -43,6 +43,10 @@
 |docker run -it -p 3001:3001 -e MESSAGE="HELLO" brunorodrigoss/docker-node-example:latest|
 ||
 |docker run -it -u root -p 3001:3001 -e MESSAGE="HELLO" brunorodrigoss/docker-node-example:latest|
+||
+|docker build -t brunorodrigoss/docker-golang-example:latest .|
+|docker run -it --rm -p 8080:8080 brunorodrigoss/docker-golang-example:latest|
+||
 
 
 
