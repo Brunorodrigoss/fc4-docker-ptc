@@ -7,4 +7,5 @@ FROM scratch
 WORKDIR /app
 COPY --from=builder /app/server .
 USER 1001
-CMD [ "./server" ]
+ENTRYPOINT [ "./server" ]
+CMD [ "8080" ]

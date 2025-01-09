@@ -47,6 +47,12 @@
 |docker build -t brunorodrigoss/docker-golang-example:latest .|
 |docker run -it --rm -p 8080:8080 brunorodrigoss/docker-golang-example:latest|
 ||
+|docker build -t brunorodrigoss/docker-golang-example:latest . --no-cache|
+|docker run -it --rm -p 8080:8080 brunorodrigoss/docker-golang-example:latest ls -la|
+||
+||
+||
+||
 
 
 
