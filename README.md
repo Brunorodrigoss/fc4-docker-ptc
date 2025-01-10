@@ -53,6 +53,10 @@
 |docker inspect brunorodrigoss/docker-golang-example:latest|
 |docker ps --filter "label=env=production"|
 ||
+|docker build -t brunorodrigoss/docker-node-base:latest -f Dockerfile.base .|
+|docker build -t brunorodrigoss/docker-node-child:latest -f Dockerfile.child .|
+|docker run --rm brunorodrigoss/docker-node-child:latest|
+||
 
 
 
