@@ -57,7 +57,12 @@
 |docker build -t brunorodrigoss/docker-node-child:latest -f Dockerfile.child .|
 |docker run --rm brunorodrigoss/docker-node-child:latest|
 ||
-
+|docker buildx ls|
+|docker context|
+|docker buildx create --name mybuilder --driver docker-container --use|
+|docker buildx use mybuilder|
+|docker buildx use desktop-linux|
+||
 
 
 
