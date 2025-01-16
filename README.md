@@ -63,13 +63,15 @@
 |docker buildx use mybuilder|
 |docker buildx use desktop-linux|
 ||
-
-
-
-
-
-
-
+|docker exec -it buildx_buildkit_mybuilder0 sh|
+|ps aux|
+|docker buildx use mybuilder|
+|docker buildx build --platform linux/amd64,linux/arm64 -t brunorodrigoss/docker-node-example:latest .|
+|docker buildx build --platform linux/amd64,linux/arm64 -t brunorodrigoss/docker-node-example:latest --push .|
+||
+||
+||
+||
 
 
 
