@@ -69,7 +69,7 @@
 |docker buildx build --platform linux/amd64,linux/arm64 -t brunorodrigoss/docker-node-example:latest .|
 |docker buildx build --platform linux/amd64,linux/arm64 -t brunorodrigoss/docker-node-example:latest --push .|
 ||
-||
+|docker buildx build --cache-to type=local,dest=../docker-cache --cache-from type=local,src=../docker-cache -t brunorodrigoss/docker-node-example:latest .|
 ||
 ||
 
