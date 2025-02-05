@@ -59,6 +59,7 @@
 ||
 |docker buildx ls|
 |docker context|
+|docker context ls|
 |docker buildx create --name mybuilder --driver docker-container --use|
 |docker buildx use mybuilder|
 |docker buildx use desktop-linux|
@@ -71,6 +72,10 @@
 ||
 |docker buildx build --cache-to type=local,dest=../docker-cache --cache-from type=local,src=../docker-cache -t brunorodrigoss/docker-node-example:latest .|
 ||
+|docker buildx prune|
+|docker buildx prune --filter=until=24h|
+|docker buildx rm mybuilder|
+|docker context rm your-context-name|
 ||
 
 
