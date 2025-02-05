@@ -77,6 +77,10 @@
 |docker buildx rm mybuilder|
 |docker context rm your-context-name|
 ||
+|docker login|
+|docker build -t brunorodrigoss/docker-golang-example:latest .|
+|docker push brunorodrigoss/docker-golang-example:latest|
+||
 
 
 
