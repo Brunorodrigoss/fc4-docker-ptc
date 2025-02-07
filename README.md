@@ -81,6 +81,8 @@
 |docker build -t brunorodrigoss/docker-golang-example:latest .|
 |docker push brunorodrigoss/docker-golang-example:latest|
 ||
-
-
-
+|docker network ls|
+|docker network create my-network|
+|docker run -d --rm --name web --network my-network nginx|
+|docker run -d --rm --name db --network my-network mongo|
+|docker exec -it web bash|
