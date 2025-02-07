@@ -86,3 +86,8 @@
 |docker run -d --rm --name web --network my-network nginx|
 |docker run -d --rm --name db --network my-network mongo|
 |docker exec -it web bash|
+||
+|docker build -t mynode_app_network .|
+|docker run -it -d --rm --name appnode --network my-network mynode_app_network|
+|docker logs appnode|
+|docker logs -f appnode|
