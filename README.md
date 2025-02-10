@@ -91,3 +91,10 @@
 |docker run -it -d --rm --name appnode --network my-network mynode_app_network|
 |docker logs appnode|
 |docker logs -f appnode|
+||
+|docker network create backend-net|
+|docker network create db-net|
+|docker run -d --rm --name db --network db-net mongo|
+|docker run -d --name app --network backend-net mynode_app_network|
+|docker network connect db-net app|
+|docker run -d --name app --network backend-net --network db-net mynode_app_network|
