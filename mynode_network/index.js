@@ -1,6 +1,10 @@
-const mongoose = require("mongoose");
+const express = require("express");
+const app = express();
 
-mongoose
-    .connect("mongodb://db:27017/test", {})
-    .then(() => console.log("Connected to MongoDB!"))
-    .catch((err) => console.log(err));
+app.get("/", (req, res) => {
+    res.send("Hello World");
+});
+
+app.listen(3000, "0.0.0.0", () => {
+    console.log("Example app listening on port 3000");
+});

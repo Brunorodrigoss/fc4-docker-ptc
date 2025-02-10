@@ -100,3 +100,7 @@
 |docker run -d --name app --network backend-net --network db-net mynode_app_network|
 ||
 |docker run -d --rm --name nginx --network host nginx|
+||
+|docker network inspect bridge|
+|docker run -it -d --rm --add-host=host.docker.internal:host-gateway --name nginx nginx|
+|root@49ee7edcc423:/# curl host.docker.internal:3000|
