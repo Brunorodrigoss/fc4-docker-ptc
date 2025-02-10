@@ -98,3 +98,5 @@
 |docker run -d --name app --network backend-net mynode_app_network|
 |docker network connect db-net app|
 |docker run -d --name app --network backend-net --network db-net mynode_app_network|
+||
+|docker run -d --rm --name nginx --network host nginx|
