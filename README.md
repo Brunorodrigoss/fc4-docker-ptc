@@ -104,3 +104,13 @@
 |docker network inspect bridge|
 |docker run -it -d --rm --add-host=host.docker.internal:host-gateway --name nginx nginx|
 |root@49ee7edcc423:/# curl host.docker.internal:3000|
+||
+|docker compose up|
+|docker compose ps|
+|docker compose ps -a|
+|docker compose up -d|
+|docker compose down|
+|docker compose exec -it nginx bash|
+|root@c0bb15440ea2:/# apt install iputils-ping|
+|docker compose down nginx|
+|docker compose up nginx -d|
