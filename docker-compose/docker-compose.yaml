@@ -1,7 +1,15 @@
 services:
 
   nodeapp:
-    build: ./node
+    build: 
+      context: ./node
+      dockerfile: Dockerfile
+    depends_on:
+      - mongo
+      # mongo:
+      #   condition: service_healthy
+    volumes:
+      - ./node:/app
 
   nginx:
     image: nginx:latest
