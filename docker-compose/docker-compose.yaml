@@ -1,7 +1,14 @@
 services:
 
+  nodeapp:
+    build: ./node
+
   nginx:
     image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx-html:/usr/share/nginx/html
 
   mongo:
     image: mongo:latest
