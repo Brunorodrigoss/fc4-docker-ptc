@@ -5,9 +5,8 @@ services:
       context: ./node
       dockerfile: Dockerfile
     depends_on:
-      - mongo
-      # mongo:
-      #   condition: service_healthy
+      mongo:
+        condition: service_healthy
     volumes:
       - ./node:/app
 
@@ -20,3 +19,10 @@ services:
 
   mongo:
     image: mongo:latest
+    healthcheck:
+      # test: "exit 0"
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s

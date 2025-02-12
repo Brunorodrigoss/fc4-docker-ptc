@@ -114,3 +114,6 @@
 |root@c0bb15440ea2:/# apt install iputils-ping|
 |docker compose down nginx|
 |docker compose up nginx -d|
+|docker compose logs nodeapp|
+|docker compose up -d --build|
+||
