@@ -26,3 +26,9 @@ services:
       timeout: 5s
       retries: 5
       start_period: 10s
+    volumes:
+      # - ./.docker//mongo_data:/data/db
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
