@@ -118,3 +118,5 @@
 |docker compose up -d --build|
 ||
 | docker volume ls | grep mongo_data |
+||
+|docker compose exec -it nodeapp sh|

@@ -4,6 +4,10 @@ services:
     build: 
       context: ./node
       dockerfile: Dockerfile
+    # environment:
+    #   - MY_VAR=123456
+    env_file:
+      - ./node/.env
     depends_on:
       mongo:
         condition: service_healthy
@@ -19,6 +23,9 @@ services:
 
   mongo:
     image: mongo:latest
+    # environment:
+    #   - MONGO_INITDB_ROOT_USERNAME=root
+    #   - MONGO_INITDB_ROOT_PASSWORD=example
     healthcheck:
       # test: "exit 0"
       test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
