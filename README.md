@@ -120,3 +120,7 @@
 | docker volume ls | grep mongo_data |
 ||
 |docker compose exec -it nodeapp sh|
+||
+|docker compose up --watch|
+|docker compose logs nodeapp-watch|
+|docker compose exec -it nodeapp-watch sh|
