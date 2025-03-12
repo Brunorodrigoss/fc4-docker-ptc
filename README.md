@@ -124,3 +124,6 @@
 |docker compose up --watch|
 |docker compose logs nodeapp-watch|
 |docker compose exec -it nodeapp-watch sh|
+||
+|go mod init docker-example|
+|docker init|
